@@ -1,11 +1,15 @@
 # ROOT build with X11 GUI on Mac M1
 In this guide I walk through building root from source with arch -x86_64 and X11 support. It includes prerequisite installations, mistakes encountered, and how I resolved them. After this build, TCanvas, TRootBrowser, and other X11-dependent components function correctly. 
  
- my pitfalls:
-   Forgetting to set DISPLAY=:0
-   Missing zstd or improper detection
-   Attempting to set environment variables inside the arch command (which does not work)
-   Always verify: grep the cache or inspect logs if ROOT components silently fail or skip features.
+# my pitfalls (FYI, all included in the scripts):
+ 
+   * Forgetting to set DISPLAY=:0
+
+   * Missing zstd or improper detection
+
+   * Attempting to set environment variables inside the arch command (which does not work)
+
+   * Always verify: grep the cache or inspect logs if ROOT components silently fail or skip features.
 
 # Instructions:
 1. install homebrew for amd architicture:
