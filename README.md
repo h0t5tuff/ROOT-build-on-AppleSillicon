@@ -1,5 +1,3 @@
-# ROOT build with X11 GUI on Mac M1
-
 
 
 1. install homebrew for amd architicture:
