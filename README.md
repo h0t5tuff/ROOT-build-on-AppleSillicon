@@ -7,10 +7,10 @@
 3. open .zshrc file in your home directory and comment out any Root (and any arm architicture Homebrew) related lines.
 4. now excute the build/uninstall script:
 
-   <chmod +x file_name.sh>
+   >chmod +x file_name.sh
 5. finally run the build/uninstall script:
 
-   <./file_name.sh>
+   >./file_name.sh
 
 6. Discard of this README.md
 
