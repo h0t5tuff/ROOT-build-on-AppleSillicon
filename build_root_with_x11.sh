@@ -1,13 +1,16 @@
 #!/bin/bash
 
-set -e
+set -euo pipefail
 
-echo "🍺 Installing ROOT build dependencies via Homebrew..."
-
-# Install core tools and libraries
+echo "🍺 Installing Homebrew dependencies..."
+echo "base tools"
 brew install python wget git make xerces-c
+echo "Build utilities"
 brew install cmake ninja pkgconf
-brew install xquartz qt libx11
+echo "graphics requirements"
+brew install qt@5 libx11
+brew install --cask xquartz
+echo "root stuff"
 brew install cfitsio davix fftw freetype ftgl gcc giflib gl2ps glew \
              graphviz gsl jpeg-turbo libpng libtiff lz4 mariadb-connector-c \
              nlohmann-json numpy openblas openssl pcre pcre2 python sqlite \
@@ -15,6 +18,13 @@ brew install cfitsio davix fftw freetype ftgl gcc giflib gl2ps glew \
 
 # Update and cleanup
 brew update && brew upgrade && brew autoremove && brew cleanup && brew doctor
+
+
+
+
+
+
+
 
 echo "📂 Setting up paths..."
 ROOT_SRC=~/root
@@ -57,6 +67,14 @@ arch -x86_64 make -j$(sysctl -n hw.logicalcpu)
 arch -x86_64 make install
 
 echo "✅ ROOT built and installed at $ROOT_INSTALL"
+
+
+
+
+
+
+
+
 
 echo "📦 Adding environment setup to ~/.zshrc..."
 cat <<EOF >> ~/.zshrc
