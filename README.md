@@ -16,12 +16,34 @@
 
 
 
-# my pitfalls (FYI, all included in the scripts):
- 
-   * Forgetting to set DISPLAY=:0
+## Build an example
 
-   * Missing zstd or improper detection
+Build
+>git clone --branch runTwo https://github.com/liebercanis/bacon2Data.git
 
-   * Attempting to set environment variables inside the arch command (which does not work)
- 
-   * Always verify: grep the cache or inspect logs if ROOT components silently fail or skip features.
+>cd bacon2Data/
+
+>git pull
+
+Create symlink
+>cd bobj
+
+on mac
+>
+>ln -s /usr/local/Cellar/root/6.36.02/etc/root/Makefile.arch .
+
+on linux
+>
+>ln -s /snap/root-framework/current/usr/local/etc/Makefile.arch .
+
+Make it
+>
+>make show
+
+>cd bobj
+
+>make clean; make
+
+>cd ../compiled
+
+>make clean; make
