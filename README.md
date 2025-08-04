@@ -16,13 +16,13 @@
 
 
 
-## Build an example
+## Build Bacon2Data example
 
 Build
 >git clone --branch runTwo https://github.com/liebercanis/bacon2Data.git
-
+>
 >cd bacon2Data/
-
+>
 >git pull
 
 Create symlink
@@ -38,12 +38,22 @@ on linux
 
 Make it
 >
->make show
+>cd bobj && make clean; make
+>
+>cd ../compiled && make clean; make
 
->cd bobj
+on mac
+>cd compiled
+>
+>mkdir caenData
+>
+>mkdir rootData  
 
->make clean; make
+on linux
+>cd compiled
+>
+>ln -s /mnt/Data2/BaconRun4Data/rootData/ rootData
+>
+>ln -s /mnt/Data2/BaconRun4Data/caenDataTensor/ caenData
 
->cd ../compiled
 
->make clean; make
