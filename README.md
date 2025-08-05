@@ -18,7 +18,7 @@
 
 ## Build Bacon2Data example
 
-Build
+### Build
 >git clone --branch runTwo https://github.com/liebercanis/bacon2Data.git
 >
 >cd bacon2Data/
@@ -42,6 +42,7 @@ Make it
 >
 >cd ../compiled && make clean; make
 
+### Data Directories
 on mac
 >cd compiled
 >
@@ -56,4 +57,9 @@ on linux
 >
 >ln -s /mnt/Data2/BaconRun4Data/caenDataTensor/ caenData
 
+>cd bacon2Data
+>
+>ln -s /mnt/Data2/BaconRun4Data/rootData/ rootData
+>
+>ln -s /mnt/Data2/BaconRun4Data/caenDataTensor/ caenData
 
