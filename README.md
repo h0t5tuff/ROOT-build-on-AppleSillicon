@@ -25,7 +25,7 @@
 >
 >git pull
 
-Create symlink
+### Create symlink
 >cd bobj
 
 on mac
@@ -36,7 +36,7 @@ on linux
 >
 >ln -s /snap/root-framework/current/usr/local/etc/Makefile.arch .
 
-Make it
+### Make it
 >
 >cd bobj && make clean; make
 >
