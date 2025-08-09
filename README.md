@@ -16,7 +16,7 @@
 
 
 
-## Build Bacon2Data example
+# Build [Bacon2Data](https://github.com/liebercanis/bacon2Data/tree/runTwo) Example
 
 ### Build
 >git clone --branch runTwo https://github.com/liebercanis/bacon2Data.git
@@ -27,12 +27,12 @@
 
 ### Create symlink
 >cd bobj
-
-on mac
+>
+> << on mac >>
 >
 >ln -s /usr/local/Cellar/root/6.36.02/etc/root/Makefile.arch .
-
-on linux
+>
+> << on linux >>
 >
 >ln -s /snap/root-framework/current/usr/local/etc/Makefile.arch .
 
@@ -42,24 +42,98 @@ on linux
 >
 >cd ../compiled && make clean; make
 
-### Data Directories
-on mac
+### Create Data Directories
+>
+> << on mac >>
+> 
 >cd compiled
 >
 >mkdir caenData
 >
 >mkdir rootData  
-
-on linux
+>
+> << on linux >>
+> 
 >cd compiled
 >
 >ln -s /mnt/Data2/BaconRun4Data/rootData/ rootData
 >
 >ln -s /mnt/Data2/BaconRun4Data/caenDataTensor/ caenData
-
+>
 >cd bacon2Data
 >
 >ln -s /mnt/Data2/BaconRun4Data/rootData/ rootData
 >
 >ln -s /mnt/Data2/BaconRun4Data/caenDataTensor/ caenData
+
+### Run it
+>
+btbSim
+>
+>cd compiled 
+>
+>btbSim <event number>
+>
+>root <btbSimq0000-00-00-00-00-1000000.root>
+>
+>new TBrowser()
+>
+anacg
+>
+> << on mac >>
+>
+>cd compiled
+>
+>cp <btbSimq0000-00-00-00-00-1000000.root> rootData/
+>
+>anacg <btbSimq0000-00-00-00-00-1000000.root>
+>
+>cd caenData
+>
+>root <anaCRun-btbSim-0000-00-00-00-00-1000000-0.root>
+>
+>new TBrowser()
+>
+> << on linux >>
+>
+>cd bacon2Data
+>
+>nohup ./anacDir.py 00_00_0000 >& anacDir00_00_0000.log &
+>
+>top
+>
+>cd caenData
+>
+>root <anaCRun-run-00_00_0000-file_0-0.root>
+>
+>new TBrowser()
+>
+summary
+>
+>cd bacon2Data/compiled/
+>
+>summary 00_00_0000
+>
+><< in gain.C change summary name (line 288) >>
+
+
+
+
+
+# Plots in Root
+
+>ntTern->Draw("yq:xq" , "" , "contz”)
+>
+>ntTern->Draw(“qsum9:qsum10:qsum11”,””,””)
+>
+>ntTrigCh->Draw("effgeo:phi","ch==9");
+>
+>RunTree->Draw(“chan8.hits.qpaek:chan8.hits.peakt”)
+
+Time difference: Wavehitfound, Wavehitmissed, Wavehitnoise
+   
+debugging tools: misDir, Ntsimfound, Ntsimmissed
+ 
+
+
 
