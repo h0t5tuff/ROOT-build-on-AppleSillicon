@@ -30,7 +30,7 @@
 >
 > << on mac >>
 >
->ln -s /usr/local/Cellar/root/6.36.02/etc/root/Makefile.arch .
+>ln -s /usr/local/Cellar/root/6.36.04/etc/root/Makefile.arch .
 >
 > << on linux >>
 >
