@@ -86,7 +86,7 @@ anacg
 >
 >cp <btbSimq0000-00-00-00-00-1000000.root> rootData/
 >
->anacg <btbSimq0000-00-00-00-00-1000000.root>
+>anacg <btbSimq0000-00-00-00-00-1000000.root> 1000000
 >
 >cd caenData
 >
@@ -120,20 +120,7 @@ summary
 
 
 
-# Plots in Root
 
->ntTern->Draw("yq:xq" , "" , "contz”)
->
->ntTern->Draw(“qsum9:qsum10:qsum11”,””,””)
->
->ntTrigCh->Draw("effgeo:phi","ch==9");
->
->RunTree->Draw(“chan8.hits.qpaek:chan8.hits.peakt”)
-
-Time difference: Wavehitfound, Wavehitmissed, Wavehitnoise
-   
-debugging tools: misDir, Ntsimfound, Ntsimmissed
- 
 
 
 
