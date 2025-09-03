@@ -24,6 +24,8 @@
 >cd bacon2Data/
 >
 >git pull
+>
+>git fetch origin && git reset --hard origin/runTwo && git clean -fdx #to clean the clone up
 
 ### Create symlink
 >cd bobj
