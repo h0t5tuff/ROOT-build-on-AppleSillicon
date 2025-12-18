@@ -1,13 +1,19 @@
 
+# Instructions
 
-1. install homebrew for amd architicture:
+1. amd64 architicture, install homebrew:
+
 
    I found that putting <arch -x86_64 > before the official homebrew install command gets the job done ;)
+
 2. move the two scripts in this repo (build_root_with_x11.sh and uninstall_root_x11.sh) to your home directory.
+
 3. open .zshrc file in your home directory and comment out any Root (and any arm architicture Homebrew) related lines.
+
 4. now excute the build/uninstall script:
 
    >chmod +x file_name.sh
+
 5. finally run the build/uninstall script:
 
    >./file_name.sh
@@ -16,31 +22,41 @@
 
 
 
+
+
+
+
+
+
+
+
+
 # Build [Bacon2Data](https://github.com/liebercanis/bacon2Data/tree/runTwo) Example
 
-### Build
+### Clone
 >git clone --branch runTwo https://github.com/liebercanis/bacon2Data.git
 >
->cd bacon2Data/
+>cd bacon2Data && git pull
 >
->git pull
->
->git fetch origin && git reset --hard origin/runTwo && git clean -fdx #to clean the clone up
+### clean the clone up when needed
+>git fetch origin && git reset --hard origin/runTwo && git clean -fdx 
 
 ### Create symlink
 >cd bobj
 >
-> << on mac >>
+> << on mac arm64>>
 >
+>: ln -s /opt/homebrew/opt/root/etc/root/Makefile.arch .
+>
+> << on mac amd64>>
+> 
 >ln -s /usr/local/opt/root/etc/root/Makefile.arch .
->
->ln -s /opt/homebrew/opt/root/etc/root/Makefile.arch .
 >
 > << on linux >>
 >
 >ln -s /snap/root-framework/current/usr/local/etc/Makefile.arch .
 
-### Make it
+### Build
 >
 >cd bobj && make clean; make
 >
@@ -70,11 +86,9 @@
 >
 >ln -s /mnt/Data2/BaconRun4Data/caenDataTensor/ caenData
 
-### Run it
->
+### Run the Excutables in bacon2Data/compiled/
+
 btbSim
->
->cd compiled 
 >
 >btbSim <event number>
 >
@@ -82,11 +96,10 @@ btbSim
 >
 >new TBrowser()
 >
+
 anacg
 >
 > << on mac >>
->
->cd compiled
 >
 >cp <btbSimq0000-00-00-00-00-1000000.root> rootData/
 >
@@ -112,9 +125,11 @@ anacg
 >
 >new TBrowser()
 >
-summary
+
+postAna
 >
->cd bacon2Data/compiled/
+
+summary
 >
 >summary 00_00_0000
 >
