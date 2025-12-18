@@ -33,6 +33,7 @@
 > << on mac >>
 >
 >ln -s /usr/local/opt/root/etc/root/Makefile.arch .
+>ln -s /opt/homebrew/opt/root/etc/root/Makefile.arch .
 >
 > << on linux >>
 >
