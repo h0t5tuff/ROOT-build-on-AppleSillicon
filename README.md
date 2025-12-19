@@ -3,18 +3,17 @@
 
 1. amd64 architicture, install homebrew:
 
-
    I found that putting <arch -x86_64 > before the official homebrew install command gets the job done ;)
 
 2. move the two scripts in this repo (build_root_with_x11.sh and uninstall_root_x11.sh) to your home directory.
 
 3. open .zshrc file in your home directory and comment out any Root (and any arm architicture Homebrew) related lines.
 
-4. now excute the build/uninstall script:
+4. now excute the desired script:
 
    >chmod +x file_name.sh
 
-5. finally run the build/uninstall script:
+5. finally run the desired script:
 
    >./file_name.sh
 
