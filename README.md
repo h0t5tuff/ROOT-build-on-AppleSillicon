@@ -127,14 +127,20 @@ anacg
 
 postAna
 >
-
-summary
->
->summary 00_00_0000
->
 ><< in gain.C change summary name (line 288) >>
 
 
+
+
+
+
+BACONMONITOR
+On mac:
+ xhost +SI:localuser:root 
+On daq (via ssh):
+ln -s /home/bacon/BaconMonitor/BaconMonitor2_tensor.py /home/Tensor/BaconMonitor2_tensor.py
+sudo visudo
+	Tensor ALL=(ALL) NOPASSWD: SETENV: /usr/bin/python3 /home/Tensor/BaconMonitor2_tensor.py
 
 
 
